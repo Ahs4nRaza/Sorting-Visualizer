@@ -296,6 +296,11 @@ body {
   font-size: 0.8rem;
   cursor: pointer;
   transition: background-color 0.2s, border-color 0.2s;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .control-center__button:hover:not(:disabled) {
@@ -332,9 +337,9 @@ body {
 
 .control-center__button--icon {
   padding: 0.4rem;
-  min-width: 36px;
-  width: 36px;
-  height: 36px;
+  min-width: 42px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;

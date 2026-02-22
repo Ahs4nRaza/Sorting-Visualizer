@@ -2,7 +2,7 @@
 
 SortScope is an interactive web application that visualizes sorting algorithms in real time. It helps understand how sorting algorithms work internally through animated bars, live statistics, and algorithm insights.
 
-![Demo](public/assets/demo.gif)
+![Demo](https://github.com/Ahs4nRaza/Sorting-Visualizer/blob/master/public/assets/demo..gif)
 
 ---
 

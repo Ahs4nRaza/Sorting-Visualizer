@@ -530,6 +530,21 @@ body {
   width: 100%;
 }
 
+.algorithm-insights__item--single-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+}
+
+.algorithm-insights__item--single-row .algorithm-insights__label {
+  min-width: auto;
+}
+
+.algorithm-insights__item--single-row .algorithm-insights__value {
+  width: auto;
+}
+
 .algorithm-insights__label {
   color: #b0b0b0;
   font-size: 0.75rem;

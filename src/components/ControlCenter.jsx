@@ -39,9 +39,24 @@ function ControlCenter({
               onChange={(e) => onAlgorithmChange(e.target.value)}
               disabled={isPlaying}
             >
-              <option value={SORTING_ALGORITHMS.BUBBLE}>{ALGORITHM_DISPLAY_NAMES[SORTING_ALGORITHMS.BUBBLE]}</option>
-              <option value={SORTING_ALGORITHMS.INSERTION}>{ALGORITHM_DISPLAY_NAMES[SORTING_ALGORITHMS.INSERTION]}</option>
-              <option value={SORTING_ALGORITHMS.SELECTION}>{ALGORITHM_DISPLAY_NAMES[SORTING_ALGORITHMS.SELECTION]}</option>
+              <option value={SORTING_ALGORITHMS.BUBBLE}>
+                {ALGORITHM_DISPLAY_NAMES[SORTING_ALGORITHMS.BUBBLE]}
+              </option>
+              <option value={SORTING_ALGORITHMS.INSERTION}>
+                {ALGORITHM_DISPLAY_NAMES[SORTING_ALGORITHMS.INSERTION]}
+              </option>
+              <option value={SORTING_ALGORITHMS.SELECTION}>
+                {ALGORITHM_DISPLAY_NAMES[SORTING_ALGORITHMS.SELECTION]}
+              </option>
+              <option value={SORTING_ALGORITHMS.COMB}>
+                {ALGORITHM_DISPLAY_NAMES[SORTING_ALGORITHMS.COMB]}
+              </option>
+              <option value={SORTING_ALGORITHMS.SHELL}>
+                {ALGORITHM_DISPLAY_NAMES[SORTING_ALGORITHMS.SHELL]}
+              </option>
+              <option value={SORTING_ALGORITHMS.COCKTAIL}>
+                {ALGORITHM_DISPLAY_NAMES[SORTING_ALGORITHMS.COCKTAIL]}
+              </option>
             </select>
           </div>
 

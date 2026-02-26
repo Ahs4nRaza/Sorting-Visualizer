@@ -21,6 +21,7 @@ function App() {
   const [currentStepData, setCurrentStepData] = useState(null)
   const [swapCount, setSwapCount] = useState(0)
   const [comparisonCount, setComparisonCount] = useState(0)
+  const [currentGap, setCurrentGap] = useState(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const [isSortingComplete, setIsSortingComplete] = useState(false)
@@ -51,6 +52,7 @@ function App() {
       sortGeneratorRef.current = null
       seenStepsRef.current = []
       setCurrentStepData(null)
+      setCurrentGap(null)
       return
     }
     
@@ -64,6 +66,7 @@ function App() {
     setIsPaused(false)
     setIsSortingComplete(false)
     setCurrentStepData(null)
+    setCurrentGap(null)
   }, [array, selectedAlgorithm])
 
   useEffect(() => {
@@ -74,6 +77,7 @@ function App() {
           if (seenStepsRef.current[nextStep]) {
             const step = seenStepsRef.current[nextStep]
             setCurrentStepData(step)
+            setCurrentGap(step?.metadata?.currentGap ?? null)
             const stepsUpToNow = seenStepsRef.current.slice(0, nextStep + 1)
             setSwapCount(stepsUpToNow.filter(s => s?.swapped).length)
             setComparisonCount(stepsUpToNow.filter(s => s?.comparing && s.comparing.length > 0).length)
@@ -91,11 +95,13 @@ function App() {
                   swapped: false,
                   sortedIndices: finalArray.map((_, i) => i)
                 })
+                setCurrentGap(null)
                 return prev
               } else {
                 setIsSortingComplete(false)
                 seenStepsRef.current[nextStep] = next.value
                 setCurrentStepData(next.value)
+                setCurrentGap(next.value?.metadata?.currentGap ?? null)
                 const stepsUpToNow = seenStepsRef.current.slice(0, nextStep + 1)
                 setSwapCount(stepsUpToNow.filter(s => s?.swapped).length)
                 setComparisonCount(stepsUpToNow.filter(s => s?.comparing && s.comparing.length > 0).length)
@@ -131,6 +137,7 @@ function App() {
     setIsPlaying(false)
     setIsPaused(false)
     setIsSortingComplete(false)
+    setCurrentGap(null)
   }
 
   const handlePlay = () => {
@@ -153,6 +160,7 @@ function App() {
           seenStepsRef.current[0] = firstStep.value
           setCurrentStepData(firstStep.value)
           setCurrentStep(0)
+          setCurrentGap(firstStep.value?.metadata?.currentGap ?? null)
           if (firstStep.value.swapped) {
             setSwapCount(1)
           }
@@ -185,11 +193,13 @@ function App() {
     setSwapCount(0)
     setComparisonCount(0)
     setIsSortingComplete(false)
+    setCurrentGap(null)
     if (array && array.length > 0) {
       const sortFunction = getSortFunction(selectedAlgorithm)
       sortGeneratorRef.current = sortFunction(array)
       seenStepsRef.current = []
       setCurrentStepData(null)
+      setCurrentGap(null)
     }
   }
 
@@ -237,6 +247,7 @@ function App() {
         selectedAlgorithm={selectedAlgorithm}
         comparisonCount={comparisonCount}
         swapCount={swapCount}
+        gap={currentGap}
       />
     </div>
   )

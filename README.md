@@ -1,8 +1,16 @@
-# SortScope — Interactive Sorting Algorithm Visualizer
+<div align="center">
+  <h1>SortScope — Interactive Sorting Algorithm Visualizer</h1>
+  <p>Interactive, real-time animations and insights to understand how sorting works.</p>
+  <p>
+    <img src="public/assets/demo..gif" alt="Demo" />
+  </p>
+</div>
 
-SortScope is an interactive web application that visualizes sorting algorithms in real time. It helps understand how sorting algorithms work internally through animated bars, live statistics, and algorithm insights.
+---
 
-![Demo](https://github.com/Ahs4nRaza/Sorting-Visualizer/blob/master/public/assets/demo..gif)
+## Purpose
+
+This project was built to make algorithm learning intuitive through visualization. Instead of reading static pseudocode, users can observe how algorithms compare values, perform swaps, and gradually reach a sorted result.
 
 ---
 
@@ -31,58 +39,24 @@ SortScope is an interactive web application that visualizes sorting algorithms i
 ## Screenshots
 
 ### Visualization
-![Visualization](public/assets/screenshot-visual.png)
+<p align="center">
+  <img src="public/assets/screenshot-visual.png" alt="Visualization" />
+</p>
 
 ### Controls
-![Controls](public/assets/screenshot-controls.png)
+<p align="center">
+  <img src="public/assets/screenshot-controls.png" alt="Controls" />
+</p>
 
 ---
 
-## Purpose
-
-This project was built to make algorithm learning intuitive through visualization. Instead of reading static pseudocode, users can observe how algorithms compare values, perform swaps, and gradually reach a sorted result.
-
----
 
 ## Supported Algorithms
 
 - Bubble Sort
 - Insertion Sort
 - Selection Sort
+- Cocktail Sort
+- Comb Sort
+- Shell Sort
 
----
-
-## Roadmap
-
-- Merge Sort
-- Quick Sort
-- Heap Sort
-- Algorithm comparison mode
-- Sound feedback
-- Dark/light theme toggle
-- Mobile responsiveness
-
----
-
-## Tech Stack
-
-![React](https://img.shields.io/badge/React-19-blue)
-![Vite](https://img.shields.io/badge/Vite-7-purple)
-![AntDesign](https://img.shields.io/badge/UI-AntDesign-red)
-
-- React
-- Vite
-- Ant Design
-- Ant Design Plots
-
----
-
-## Contributing
-
-Contributions are welcome. Fork the repository, create a feature branch, commit changes, and open a pull request.
-
----
-
-## License
-
-This project is licensed under the MIT License.
